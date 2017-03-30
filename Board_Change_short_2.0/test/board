@@ -1,0 +1,2596 @@
+!!!!   12    1    1 1272280674   0000                                         
+!---------------------------------------------------------------------------
+!AGILENT 3070 BOARD CONFIGURATION FORMAT         Mon Apr 26, 2010 7:17:55 PM
+!
+! board
+!---------------------------------------------------------------------------
+
+HEADING
+  "10629-SB";
+
+GLOBAL OPTIONS
+  Fixture Type    EXPRESS;
+  Fixture Size    BANK2;
+  Top Probes Allowed  ON;
+  Heavy Probe Force      8;
+  Light Probe Force      4;
+  Mechanical Density Threshold    800;
+  Vacuum Density Threshold    104;
+  Autofile   12;
+  Test Strategy COMBINATIONAL;
+  WireWrapping AUTO;
+  Metric Units OFF;
+  Common Lead Resistance      0.1;    ! (ohms) from probe to component.
+  Common Lead Inductance       1u;    ! (Henries) from probe to component.
+  Capacitance Compensation ON;
+  IPG Digital Resistance Threshold       42;    ! (ohms)
+  Preconditioning Levels    1;
+  Additional Board Voltage    0;    ! (volts)
+  IPG TestJet Drive Thru Threshold      10k;    ! (ohms)
+  Boundary Scan Overdrive  OFF;
+  Boundary Scan Disables  OFF;
+  Ground Bounce Suppression  OFF;
+
+DEVICE OPTIONS
+  Tolerance Multiplier  1.5;
+  Remote Sensing  ON;
+  Fuse Threshold    10;
+  Diode Current     1m;
+  Zener Current   1m;
+  Adjust  ACCURATE;
+  Upstream Disable  ON;
+  Upstream Condition  ON;
+  END
+
+FAMILY OPTIONS
+  TTL
+    Drive High     3.5;
+    Drive Low      0.2;
+    Receive High     2;
+    Receive Low    0.8;
+    Edge Speed     100;
+    Open Input Default  X;
+    Load        UP;
+  LV_TTL
+    Drive High       3;
+    Drive Low      0.2;
+    Receive High   1.8;
+    Receive Low    0.8;
+    Edge Speed     100;
+    Open Input Default  X;
+    Load        NONE;
+  V1_8
+    Drive High     1.8;
+    Drive Low      0.2;
+    Receive High  1.35;
+    Receive Low    0.8;
+    Edge Speed     100;
+    Open Input Default  X;
+    Load        NONE;
+  V3_3
+    Drive High     3.3;
+    Drive Low      0.1;
+    Receive High   2.2;
+    Receive Low    0.8;
+    Edge Speed     100;
+    Open Input Default  1;
+    Load        UP;
+  ECL
+    Drive High    -0.5;
+    Drive Low     -2.7;
+    Receive High  -1.2;
+    Receive Low   -1.5;
+    Edge Speed     150;
+    Open Input Default  0;
+    Load        DOWN;
+  LVCMOS
+    Drive High     3.3;
+    Drive Low      0.1;
+    Receive High   2.2;
+    Receive Low    0.8;
+    Edge Speed     100;
+    Open Input Default  1;
+    Load        NONE;
+  HCMOS
+    Drive High       4;
+    Drive Low      0.6;
+    Receive High   3.5;
+    Receive Low    0.6;
+    Edge Speed     100;
+    Open Input Default  X;
+    Load        NONE;
+  CMOS
+    Drive High       4;
+    Drive Low      0.4;
+    Receive High   3.6;
+    Receive Low    0.5;
+    Edge Speed      50;
+    Open Input Default  X;
+    Load        NONE;
+
+CARD OPTIONS
+  TTL
+    HYBRID;
+  LV_TTL
+    HYBRID;
+  V1_8
+    HYBRID;
+  V3_3
+    HYBRID;
+  ECL
+    HYBRID;
+  LVCMOS
+    HYBRID;
+  HCMOS
+    HYBRID;
+  CMOS
+    HYBRID;
+
+LIBRARY OPTIONS
+  "library/custom"
+  "library/setup"
+  "library/standard";
+
+UNCONNECTED PIN NC;
+
+
+CAPACITOR
+  C501          1n    30    30 f "1000p,78.10224.2FL";
+  C502          1n    30    30 f "1000p,78.10224.2FL";
+  C503          1n    30    30 f "1000p,78.10234.1BL";
+  C504          1n    30    30 f "1000p,78.10234.1BL";
+  C505          1n    30    30 f "1000p,78.10224.2FL";
+  C506          1n    30    30 f "1000p,78.10224.2FL";
+  C507        100n    30    30 f "0.1u,78.10423.2FL";
+  C508        100n    30    30 f "0.1u,78.10423.2FL";
+  C509        4.7u    30    30 f "4.7u,78.47520.5BL";
+  C510          1p    10    10 f "no_mount";
+  C511         12p    30    30 f "12p,78.12034.1FL";
+  C512         12p    30    30 f "12p,78.12034.1FL";
+  C513        100n    30    30 f "0.1u,78.10423.2FL";
+  C514        100n    30    30 f "0.1u,78.10423.2FL";
+  C515        100n    30    30 f "0.1u,78.10423.2FL";
+  C516          1p    10    10 f "no_mount";
+  C517        100n    30    30 f "0.1u,78.10423.2FL";
+  C518        100n    30    30 f "0.1u,78.10423.2FL";
+  C519        100n    30    30 f "0.1u,78.10423.2FL";
+  C520        100n    30    30 f "0.1u,78.10423.2FL";
+  C521        100n    30    30 f "0.1u,78.10423.2FL";
+  C522        100n    30    30 f "0.1u,78.10423.2FL";
+  C523        100n    30    30 f "0.1u,78.10423.2FL";
+  C524        100n    30    30 f "0.1u,78.10423.2FL";
+  C525          1p    10    10 f "no_mount";
+  C526          1p    10    10 f "no_mount";
+  C527         10n    30    30 f "0.01u,78.10324.2FL";
+  C528        100n    30    30 f "0.1u,78.10423.2FL";
+  C529          1p    10    10 f "no_mount";
+  C532        100n    30    30 f "0.1u,78.10423.2FL";
+  C533        100n    30    30 f "0.1u,78.10423.2FL";
+  C534        100n    30    30 f "0.1u,78.10423.2FL";
+  C535        100n    30    30 f "0.1u,78.10423.2FL";
+  C536        100n    30    30 f "0.1u,78.10423.2FL";
+  C538        100n    30    30 f "0.1u,78.10423.2FL";
+  C539        100n    30    30 f "0.1u,78.10423.2FL";
+  C542          1p    10    10 f "no_mount";
+  C543          1u    30    30 f "1u,78.10520.5FL";
+  C544          1p    10    10 f "no_mount";
+  C545          1p    10    10 f "no_mount";
+  C546         10u    30    30 f "10u,78.10620.51L";
+  C547          1u    30    30 f "1u,78.10520.5FL";
+  C548          1u    30    30 f "1u,78.10520.5FL";
+  C549          1u    30    30 f "1u,78.10520.5FL";
+  C550          1p    10    10 f "no_mount";
+  C551          1p    10    10 f "no_mount";
+  C601         10u    30    30 f "10u,78.10620.51L";
+  C602        100n    30    30 f "0.1u,78.10423.2FL";
+  C603        100n    30    30 f "0.1u,78.10423.2FL";
+  C604          1n    30    30 f "1000p,78.1022N.24L";
+  C605        100n    30    30 f "0.1u,78.10423.2FL";
+  C606        100n    30    30 f "0.1u,78.10423.2FL";
+  C701          1u    30    30 f "1u,78.10520.5FL";
+  C901          1p    10    10 f "no_mount";
+  C902        100n    30    30 f "0.1u,78.10421.2FL";
+  C903          1p    10    10 f "no_mount";
+  C904          1p    10    10 f "no_mount";
+  C905          1p    10    10 f "no_mount";
+  C906        100n    30    30 f "0.1u,78.10421.2FL";
+  EC201       100n    30    30 f "0.1u,78.10422.5FL";
+  EC202       100n    30    30 f "0.1u,78.10422.5FL";
+  EC203       100n    30    30 f "0.1u,78.10422.5FL";
+  EC204       100n    30    30 f "0.1u,78.10422.5FL";
+  EC205       100n    30    30 f "0.1u,78.10422.5FL";
+  EC206       100n    30    30 f "0.1u,78.10422.5FL";
+  EC207         1p    10    10 f "no_mount";
+  EC208       100n    30    30 f "0.1u,78.10422.5FL";
+  EC209       100n    30    30 f "0.1u,78.10422.5FL";
+  EC210         1p    10    10 f "no_mount";
+  EC211         1p    10    10 f "no_mount";
+  EC212       100n    30    30 f "0.1u,78.10422.5FL";
+  EC213       100n    30    30 f "0.1u,78.10422.5FL";
+  EC214       100n    30    30 f "0.1u,78.10422.5FL";
+  EC601         1p    10    10 f "no_mount";
+  EC602         1p    10    10 f "no_mount";
+  EC603         1p    10    10 f "no_mount";
+  EC604         1p    10    10 f "no_mount";
+  EC801       220p    30    30 f "220p,78.22124.2FL";
+  EC901         1p    10    10 f "no_mount";
+  PC201       100n    30    30 f "0.1u,78.10424.2BL";
+  PC202        10n    30    30 f "0.01u,78.10324.2FL";
+  PC203        10n    30    30 f "0.01u,78.10324.2FL";
+  PC204         1u    30    30 f "1u,78.10522.21L";
+  PC205        10n    30    30 f "0.01u,78.10324.2FL";
+  PC206        10u    30    30 f "10u,78.10622.52L";
+  PC301        10n    30    30 f "0.01u,78.10324.2FL";
+  PC302       100n    30    30 f "0.1u,78.10424.2BL";
+  PC303       100n    30    30 f "0.1u,78.10424.2BL";
+  PC304         1p    10    10 f "no_mount";
+  PC305       100n    30    30 f "0.1u,78.10424.2BL";
+  PC306        10u    30    30 f "10u,78.10622.52L";
+  PC307       100n    30    30 f "0.1u,78.10424.2BL";
+  PC308       100n    30    30 f "0.1u,78.10423.2FL";
+  PC309         1p    10    10 f "no_mount";
+  PC310        10u    30    30 f "10u,78.10622.52L";
+  PC311       100n    30    30 f "0.1u,78.10424.2BL";
+  PC312       100n    30    30 f "0.1u,78.10424.2BL";
+  PC313         1p    10    10 f "no_mount";
+  PC314         1p    10    10 f "no_mount";
+  PC315       100n    30    30 f "0.1u,78.10424.2BL";
+  PC316        10u    30    30 f "10u,78.10622.52L";
+  PC317        10u    30    30 f "10u,78.10622.52L";
+  PC318        10u    30    30 f "10u,78.10622.52L";
+  PC319         1p    10    10 f "no_mount";
+  PC320       100n    30    30 f "0.1u,78.10424.2BL";
+  PC321       150p    30    30 f "150p,78.15134.1FL";
+  PC322       2.2n    30    30 f "2200p,78.22224.2FL";
+  PC323       100n    30    30 f "0.1u,78.10424.2BL";
+  PC324       220p    30    30 f "220p,78.22124.2FL";
+  PC325        56p    30    30 f "56p,78.56034.1FL";
+  PC326         1p    10    10 f "no_mount";
+  PC327         1p    10    10 f "no_mount";
+  PC328         1p    10    10 f "no_mount";
+  PC329         1u    30    30 f "1u,78.10520.5FL";
+  PC330         1p    10    10 f "no_mount";
+  PC331         1p    10    10 f "no_mount";
+  PC332       100n    30    30 f "0.1u,78.10422.5FL";
+  PC337         1p    10    10 f "no_mount";
+  PC401       100n    30    30 f "0.1u,78.10424.2BL";
+  PC402       2.2n    30    30 f "2200p,78.22224.2FL";
+  TC702       100u    30    30 f "100u,77.C1071.081";
+  TC901         1p    10    10 f "no_mount";
+  TC902         1p    10    10 f "no_mount";
+
+CONNECTOR
+  AFTP201   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP202   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP203   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP401   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP403   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP404   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP405   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP406   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP601   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP602   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP603   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP604   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP605   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP606   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP607   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP608   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP701   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP702   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP703   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP704   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP801   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP903   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  AFTP905   NT PN"AFTE14P-GP_ZZ_AFT14_101";
+  BATT1     NT PN"9P" "20.81271.009";
+  DCIN1     NT PN"JACK" "22.10037.J51";
+  H16       NT PN"no_mount";
+  H17       NT PN"no_mount";
+  H18       NT PN"no_mount";
+  HMI1      NT PN"STF256R117H119-GP_34_4B5";
+  HPB1      NT PN"STF236R126H101-GP_34_4Z0";
+  HPB2      NT PN"STF236R126H101-GP_34_4Z0";
+  IOBD2     NT PN"SMD" "20.F1654.060";
+  PG301     NT PN"no_mount";
+  PG302     NT PN"no_mount";
+  PG303     NT PN"no_mount";
+  PG304     NT PN"no_mount";
+  PG305     NT PN"no_mount";
+  PG306     NT PN"no_mount";
+  PG307     NT PN"no_mount";
+  PG308     NT PN"no_mount";
+  PG309     NT PN"no_mount";
+  PG310     NT PN"no_mount";
+  PG401     NT PN"no_mount";
+  PWRBTN1   NT PN"4P" "20.K0341.004";
+  RJ45      NT PN"JACK" "22.10277.C91";
+  SPR2      NT PN"S8-75RG" "34.42T14.002";
+  USB2      NT PN"CONN" "22.10321.A11";
+  WLAN1     NT PN"PCI" "62.10043.771";
+  XF601     NT PN"SMD" "68.HD081.30B";
+  XF602     NT PN"SMD" "68.HD081.30B";
+
+DIODE
+  PD201        0.9     0.5 "P6SBMJ24APT,83.P6SBM.AAG";
+  PD204        0.9     0.5 "no_mount";
+  PD301        0.9     0.5 "PMEG4005AEA,83.R5004.08F";
+  PD302        0.9     0.5 "no_mount";
+
+INDUCTOR
+  L501         33u    10    10      10 f "33U,68.4R750.20C";
+  L601         33u    10    10      10 f "33U,68.00335.091";
+  PL301        33u    10    10      10 f "33U,68.5R61A.10A";
+
+JUMPER
+  PR315     CLOSED;
+  PR317     CLOSED;
+  R510      CLOSED;
+
+PIN LIBRARY
+  D701           NT PN"no_mount";
+  PD202          NT PN"no_mount";
+  PD203          PN"bav99";
+  PD401          PN"bav99";
+  PD402          PN"bav99";
+  PD403          PN"bav99";
+  PQ201          PN"2n7002k-e3";
+  PQ202          PN"npn";
+  PQ301          PN"dmn66d0ldw-7";
+  PQ304          PN"2n7002a-7";
+  PRN401         PN"4p100";
+  PU201          PN"si4835ddy-t1-ge3";
+  PU301          PN"charg";
+  PU302          PN"si4835ddy-t1-ge3";
+  PU304          PN"si4835ddy-t1-ge3";
+  PU305          PN"ao4496";
+  PU306          PN"ao4496";
+  Q501           PN"si2301cds-t1-ge3";
+  Q502           PN"2n7002a-7";
+  RN501          PN"8p49.9";
+  RN502          PN"8p49.9";
+  RN601          NT PN"no_mount99m";
+  RN602          PN"8p75";
+  RN603          NT PN"no_mount99m";
+  TR701          PN"68.00201.141";
+  U603           NT PN"no_mount";
+  U604           NT PN"no_mount";
+  U605           NT PN"no_mount";
+  U701           PN"ctrl";
+  X501           PN"25m";
+
+RESISTOR
+  PR201        15k    10    10 f "15k,63.15334.1DL";
+  PR202        10k    10    10 f "10k,63.10334.1DL";
+  PR203       100k    10    10 f "100k,63.10434.1DL";
+  PR204        99m    10    10 f "no_mount";
+  PR205        99m    10    10 f "no_mount";
+  PR206       2.2k    10    10 f "2.2k,63.22234.1DL";
+  PR207         33    10    10 f "33,63.33034.1DL";
+  PR208        99m    10    10 f "no_mount";
+  PR209        99m    10    10 f "no_mount";
+  PR210       240k    10    10 f "240k,63.24434.15L";
+  PR211        47k    10    10 f "47k,63.47333.15L";
+  PR301        10k    10    10 f "10k,63.10334.1DL";
+  PR302        10m    10    10 f "0.01,64.R0105.77L";
+  PR303       100k    10    10 f "100k,63.10434.1DL";
+  PR304        10k    10    10 f "10k,63.10334.1DL";
+  PR305        99m    10    10 f "no_mount";
+  PR306       470k    10    10 f "470k,63.47434.1DL";
+  PR307        99m    10    10 f "no_mount";
+  PR308        99m    10    10 f "no_mount";
+  PR309       309k    10    10 f "309k,64.30935.55L";
+  PR310        99m    10    10 f "no_mount";
+  PR311        10k    10    10 f "10k,63.10334.1DL";
+  PR312        99m    10    10 f "no_mount";
+  PR313      49.9k    10    10 f "49.9k,64.49925.6DL";
+  PR314        99m    10    10 f "no_mount";
+  PR316        99m    10    10 f "no_mount";
+  PR318        99m    10    10 f "no_mount";
+  PR319        10m    10    10 f "0.01,64.R0105.77L";
+  PR320        99m    10    10 f "no_mount";
+  PR321       4.7k    10    10 f "4.7k,63.47234.1DL";
+  PR322       200k    10    10 f "200k,64.20035.6DL";
+  PR323        99m    10    10 f "no_mount";
+  PR324        99m    10    10 f "no_mount";
+  PR325        99m    10    10 f "no_mount";
+  PR326       7.5k    10    10 f "7.5k,64.75015.6DL";
+  PR327        99m    10    10 f "no_mount";
+  PR328        99m    10    10 f "no_mount";
+  PR329        99m    10    10 f "no_mount";
+  PR330        99m    10    10 f "no_mount";
+  PR401       470k    10    10 f "470k,63.47434.1DL";
+  PR402        100    10    10 f "100,63.10134.1DL";
+  R501         99m    10    10 f "no_mount";
+  R502         99m    10    10 f "no_mount";
+  R503         10k    10    10 f "10k,63.10334.1DL";
+  R504         99m    10    10 f "no_mount";
+  R505          1k    10    10 f "1k,63.10234.1DL";
+  R506        4.7k    10    10 f "4.7k,63.47234.1DL";
+  R507         99m    10    10 f "no_mount";
+  R508       2.37k    10    10 f "2.37k,64.23715.6DL";
+  R509         99m    10    10 f "no_mount";
+  R514        5.1k    10    10 f "5.1k,63.51234.1DL";
+  R516         99m    10    10 f "no_mount";
+  R601         99m    10    10 f "no_mount";
+  R602         99m    10    10 f "no_mount";
+  R603         99m    10    10 f "no_mount";
+  R604         99m    10    10 f "no_mount";
+  R703         99m    10    10 f "no_mount";
+  R801         99m    10    10 f "no_mount";
+  R911         99m    10    10 f "no_mount";
+  R912         99m    10    10 f "no_mount";
+  R913         99m    10    10 f "no_mount";
+  R919         99m    10    10 f "no_mount";
+
+PIN_MAP
+  CAPACITOR
+    P 1;
+    N 2;
+  DIODE
+    1 A;
+    2 C;
+  FET
+    1 S;
+    2 G;
+    3 D;
+  POTENTIOMETER
+    3 W;
+  TRANSISTOR
+    1 E;
+    2 B;
+    3 C;
+  ZENER
+    1 A;
+    2 C;
+  END
+
+CONNECTIONS
+  "(NC)"
+    IOBD2.25
+    IOBD2.33
+    IOBD2.61
+    IOBD2.62
+    PWRBTN1.2
+    PWRBTN1.4
+    PWRBTN1.7
+    PWRBTN1.8
+    PWRBTN1.9
+    PWRBTN1.10
+    U603.4
+    U603.5
+    U603.6
+    U603.7
+    U603.11
+    U604.4
+    U604.5
+    U604.6
+    U604.7
+    U604.11
+    U605.2
+    U605.4
+    U605.5
+    U605.6
+    U605.8
+    U605.10
+    U701.25
+    U701.26
+    U701.28
+    USB2.7
+    USB2.8
+    WLAN1.8
+    WLAN1.10
+    WLAN1.12
+    WLAN1.14
+    WLAN1.16
+    WLAN1.42
+    WLAN1.44
+    WLAN1.45
+    WLAN1.46
+    WLAN1.47
+    WLAN1.49
+    WLAN1.55
+    WLAN1.56;
+  +1_5V_RUN
+    C905.1
+    C906.1
+    IOBD2.3
+    TC902.1
+    WLAN1.6
+    WLAN1.28
+    WLAN1.48;
+  +3_3V_ALW
+    C507.1
+    IOBD2.22
+    PD203.2
+    PR206.1
+    Q501.3
+    R502.1
+    R503.1;
+  +3_3V_LAN
+    C503.1
+    C508.1
+    C509.1
+    C515.1
+    C525.1
+    C526.1
+    C528.1
+    C542.1
+    C543.1
+    C544.1
+    Q501.1
+    R501.2
+    R502.2
+    R506.1
+    U701.1;
+  +3_3V_RUN
+    C902.1
+    C903.1
+    C904.1
+    EC211.1
+    IOBD2.4
+    IOBD2.5
+    R501.1
+    TC901.1
+    WLAN1.2
+    WLAN1.24
+    WLAN1.39
+    WLAN1.41
+    WLAN1.52;
+  +5V_ALW
+    C901.1
+    IOBD2.24
+    PD202.2
+    PR202.1
+    R913.1;
+  +5V_MINICARD
+    R913.2
+    R919.2
+    WLAN1.51;
+  +5V_USB1
+    AFTP701.1
+    C701.1
+    D701.4
+    EC210.1
+    IOBD2.1
+    IOBD2.2
+    R703.1
+    TC702.1
+    USB2.1;
+  +CHAGER_SRC
+    EC204.1
+    PC306.1
+    PC307.1
+    PC310.1
+    PG304.1
+    PG305.1
+    PG306.1
+    PG307.1
+    PU305.5
+    PU305.6
+    PU305.7
+    PU305.8;
+  +DC_IN
+    AFTP201.1
+    DCIN1.2
+    DCIN1.3
+    EC206.1
+    EC214.1
+    PC201.1
+    PC204.1
+    PD201.C
+    PR210.1
+    PU201.1
+    PU201.2
+    PU201.3;
+  +DC_IN_SS
+    PC202.1
+    PC203.1
+    PC205.1
+    PC206.1
+    PR304.1
+    PR306.1
+    PR309.1
+    PR310.2
+    PU201.5
+    PU201.6
+    PU201.7
+    PU201.8
+    PU302.5
+    PU302.6
+    PU302.7
+    PU302.8
+    PU304.4;
+  +KBC_PWR
+    IOBD2.23
+    PC308.1
+    PD401.2
+    PD402.2
+    PD403.2
+    PR401.2
+    PU301.11;
+  +PWR_SRC
+    EC201.1
+    EC202.1
+    EC203.1
+    EC205.1
+    EC208.1
+    EC209.1
+    IOBD2.26
+    IOBD2.27
+    IOBD2.28
+    IOBD2.29
+    IOBD2.30
+    IOBD2.31
+    IOBD2.32
+    PG303.1
+    PG304.2
+    PG305.2
+    PG306.2
+    PG307.2
+    PR302.2
+    PU304.1
+    PU304.2
+    PU304.3;
+  +SDC_IN
+    EC207.1
+    PG302.1
+    PR302.1
+    PR303.1
+    PU302.1
+    PU302.2
+    PU302.3;
+  +VCHGR
+    AFTP406.1
+    BATT1.8
+    BATT1.9
+    EC212.1
+    EC213.1
+    PC315.1
+    PC316.1
+    PC317.1
+    PC318.1
+    PC319.1
+    PC401.1
+    PC402.1
+    PD302.C
+    PG310.2
+    PG401.1
+    PR319.2
+    PU304.5
+    PU304.6
+    PU304.7
+    PU304.8;
+  +VCHGR1
+    PG309.2
+    PL301.2
+    PR319.1;
+  24745_BOOT_1
+    PR315.1
+    PU301.25;
+  24745_ICOIT_1
+    PC309.1
+    PR312.1
+    PU301.26;
+  24745_LGATE_1
+    PU301.20
+    PU306.4;
+  24745_PHASE_GND
+    PC314.1
+    PR317.1
+    PU301.23;
+  24745_PR3824
+    PG310.1
+    PR324.2;
+  AC_IN#
+    IOBD2.18
+    PC337.1
+    PQ304.1;
+  ACAV_IN
+    PQ304.2
+    PR311.2
+    PR314.2
+    PR316.2
+    PR318.1;
+  AD_IA
+    IOBD2.15
+    PR320.2;
+  AVDD_CEN
+    C601.1
+    C602.1
+    C603.1
+    C605.1
+    C606.1
+    EC601.1
+    EC602.1
+    EC603.1
+    EC604.1
+    L601.2
+    XF601.11
+    XF601.14
+    XF602.11
+    XF602.14;
+  BAT_IN#
+    IOBD2.19
+    PD401.3
+    PR401.1
+    PR402.1;
+  BAT_SCL
+    IOBD2.35
+    PD403.3
+    PG301.2
+    PRN401.4;
+  BAT_SCL_1
+    PG301.1
+    PU301.10;
+  BAT_SDA
+    IOBD2.34
+    PD402.3
+    PG308.2
+    PRN401.3;
+  BAT_SDA_1
+    PG308.1
+    PU301.9;
+  BAT_SENSE
+    PC332.1
+    PR328.2
+    PU301.15
+    PU301.16;
+  BATT_SENSE
+    PG401.2
+    PR328.1
+    PR330.1;
+  BLUETOOTH_EN
+    IOBD2.7
+    R919.1;
+  BQ24745_CHARGER_UGATE
+    PC313.1
+    PU301.24
+    PU305.4;
+  BT_ACT
+    IOBD2.8
+    WLAN1.5;
+  CHG_AGND
+    PC301.2
+    PC302.1
+    PC304.1
+    PC308.2
+    PC309.2
+    PC320.1
+    PC324.2
+    PC326.2
+    PC327.2
+    PC328.2
+    PC329.2
+    PC330.2
+    PC331.1
+    PC332.2
+    PR313.2
+    PR325.2
+    PR329.2
+    PR330.2
+    PU301.1
+    PU301.12
+    PU301.14
+    PU301.29;
+  CLK_PCIE_LAN
+    IOBD2.51
+    U701.33;
+  CLK_PCIE_LAN#
+    IOBD2.50
+    U701.32;
+  CLK_PCIE_MINI1
+    IOBD2.39
+    WLAN1.13;
+  CLK_PCIE_MINI1#
+    IOBD2.38
+    WLAN1.11;
+  E51_RXD
+    IOBD2.21
+    R911.1;
+  E51_RXD_R
+    R911.2
+    WLAN1.17;
+  E51_TXD
+    IOBD2.20
+    R912.1;
+  E51_TXD_R
+    R912.2
+    WLAN1.19;
+  GND
+    AFTP203.1
+    AFTP702.1
+    BATT1.1
+    BATT1.2
+    BATT1.4
+    BATT1.10
+    BATT1.11
+    C501.2
+    C502.2
+    C503.2
+    C504.2
+    C505.2
+    C506.2
+    C507.2
+    C508.2
+    C509.2
+    C510.2
+    C511.1
+    C512.1
+    C513.2
+    C514.2
+    C515.2
+    C516.2
+    C517.2
+    C518.2
+    C519.2
+    C520.2
+    C521.2
+    C522.2
+    C523.2
+    C524.2
+    C525.2
+    C526.2
+    C527.2
+    C528.2
+    C529.2
+    C532.1
+    C533.1
+    C534.1
+    C535.2
+    C536.2
+    C542.2
+    C543.2
+    C544.2
+    C545.2
+    C546.2
+    C547.2
+    C548.2
+    C549.2
+    C550.2
+    C551.2
+    C601.2
+    C602.2
+    C603.2
+    C604.2
+    C605.2
+    C606.2
+    C701.2
+    C901.2
+    C902.2
+    C903.2
+    C904.2
+    C905.2
+    C906.2
+    D701.1
+    DCIN1.4
+    DCIN1.5
+    DCIN1.6
+    DCIN1.7
+    DCIN1.8
+    DCIN1.9
+    EC201.2
+    EC202.2
+    EC203.2
+    EC204.2
+    EC205.2
+    EC206.2
+    EC207.2
+    EC208.2
+    EC209.2
+    EC210.2
+    EC211.2
+    EC212.2
+    EC213.2
+    EC214.2
+    EC601.2
+    EC602.2
+    EC603.2
+    EC604.2
+    EC801.2
+    EC901.2
+    H16.1
+    H17.1
+    H18.1
+    HMI1.1
+    HPB1.1
+    HPB2.1
+    IOBD2.40
+    IOBD2.43
+    IOBD2.46
+    IOBD2.49
+    IOBD2.52
+    IOBD2.55
+    IOBD2.58
+    PC201.2
+    PC202.2
+    PC203.2
+    PC205.2
+    PC206.2
+    PC303.2
+    PC306.2
+    PC307.2
+    PC310.2
+    PC311.2
+    PC314.2
+    PC315.2
+    PC316.2
+    PC317.2
+    PC318.2
+    PC319.2
+    PC337.2
+    PC401.2
+    PC402.2
+    PD201.A
+    PD202.1
+    PD203.1
+    PD204.C
+    PD302.A
+    PD401.1
+    PD402.1
+    PD403.1
+    PQ202.3
+    PQ301.1
+    PQ301.4
+    PQ304.3
+    PR201.2
+    PR211.1
+    PR306.2
+    PR318.2
+    PR329.1
+    PU301.19
+    PU306.1
+    PU306.2
+    PU306.3
+    PWRBTN1.3
+    PWRBTN1.5
+    PWRBTN1.6
+    Q502.3
+    R508.2
+    R514.2
+    R516.2
+    R703.2
+    RJ45.9
+    RJ45.10
+    SPR2.1
+    TC702.2
+    TC901.2
+    TC902.2
+    U605.11
+    U701.27
+    U701.41
+    USB2.4
+    USB2.5
+    USB2.6
+    WLAN1.4
+    WLAN1.9
+    WLAN1.15
+    WLAN1.18
+    WLAN1.21
+    WLAN1.26
+    WLAN1.27
+    WLAN1.29
+    WLAN1.34
+    WLAN1.35
+    WLAN1.37
+    WLAN1.40
+    WLAN1.50
+    WLAN1.53
+    WLAN1.54;
+  ICH_SMBCLK
+    IOBD2.37
+    WLAN1.30;
+  ICH_SMBDATA
+    IOBD2.36
+    WLAN1.32;
+  KBC_PWRBTN#
+    EC801.1
+    IOBD2.9
+    R801.2;
+  KBC_PWRBTN#_IN
+    AFTP801.1
+    PWRBTN1.1
+    R801.1;
+  LAN_AVDDH
+    C519.1
+    C520.1
+    C533.2
+    C548.1
+    U701.9
+    U701.16
+    U701.22;
+  LAN_AVDDL
+    C518.1
+    C521.1
+    C522.1
+    C532.2
+    C534.2
+    C547.1
+    U701.6
+    U701.13
+    U701.19
+    U701.31
+    U701.34;
+  LAN_CLKREQ#
+    R506.2
+    R509.1
+    R510.2;
+  "LAN_CLKREQ#/LED2"
+    R509.2
+    U701.23;
+  LAN_DVDDL
+    C523.1
+    C524.1
+    C549.1
+    U701.24
+    U701.37;
+  LAN_LED_ACTN
+    C551.1
+    R514.1
+    U701.38;
+  LAN_LED_LINK
+    C550.1
+    R516.1
+    U701.39;
+  LAN_LX
+    L501.2
+    U701.40;
+  LAN_TERMINAL
+    C604.1
+    RN602.5
+    RN602.6
+    RN602.7
+    RN602.8;
+  LAN_VDDCT
+    C504.1
+    C517.1
+    C529.1
+    C546.1
+    L501.1
+    L601.1
+    R504.2
+    U701.5;
+  LAN_X1
+    C512.2
+    U701.8
+    X501.1;
+  LAN_X2
+    C511.2
+    U701.7
+    X501.2;
+  MAX8731A_ACIN
+    PC301.1
+    PR309.2
+    PR313.1
+    PU301.2;
+  MAX8731A_ACOK
+    PQ301.2
+    PR316.1
+    PU301.13;
+  MAX8731A_BST1
+    PC312.1
+    PD301.C
+    PR315.2;
+  MAX8731A_CCI
+    PC321.2
+    PC322.2
+    PC325.1
+    PC327.1
+    PR322.1
+    PU301.5;
+  MAX8731A_CCS
+    PC325.2
+    PC328.1
+    PR326.1
+    PU301.4;
+  MAX8731A_CCV
+    PR321.1
+    PR322.2
+    PU301.6;
+  MAX8731A_CCV1
+    PC321.1
+    PC326.1
+    PR321.2;
+  MAX8731A_CSIN
+    PC323.1
+    PC331.2
+    PR324.1
+    PU301.17;
+  MAX8731A_CSIP
+    PG309.1
+    PR323.2;
+  MAX8731A_CSIP_1
+    PC320.2
+    PC323.2
+    PR323.1
+    PU301.18;
+  MAX8731A_CSSN
+    PC304.2
+    PC305.2
+    PR308.2
+    PU301.27;
+  MAX8731A_CSSP
+    PC302.2
+    PC305.1
+    PR307.2
+    PU301.28;
+  MAX8731A_DAC
+    PC330.1
+    PR327.2
+    PU301.7;
+  MAX8731A_DCIN
+    PC303.1
+    PR310.1
+    PU301.22;
+  MAX8731A_IINP
+    PC324.1
+    PR320.1
+    PR325.1
+    PU301.8;
+  MAX8731A_LDO
+    PC311.1
+    PD301.A
+    PR312.2
+    PR314.1
+    PU301.21;
+  MAX8731A_LX1
+    PC312.2
+    PC313.2
+    PL301.1
+    PR317.2
+    PU305.1
+    PU305.2
+    PU305.3
+    PU306.5
+    PU306.6
+    PU306.7
+    PU306.8;
+  MAX8731A_REF
+    PC329.1
+    PR311.1
+    PR327.1
+    PU301.3;
+  MDI0
+    C501.1
+    C513.1
+    RN501.1
+    RN501.2;
+  MDI0+
+    RN501.8
+    U605.9
+    U701.11
+    XF601.9;
+  "MDI0-"
+    RN501.7
+    U605.7
+    U701.12
+    XF601.10;
+  MDI1
+    C502.1
+    C514.1
+    RN501.3
+    RN501.4;
+  MDI1+
+    RN501.6
+    U605.3
+    U701.14
+    XF601.15;
+  "MDI1-"
+    RN501.5
+    U605.1
+    U701.15
+    XF601.16;
+  MDI2
+    C506.1
+    C536.1
+    RN502.1
+    RN502.2;
+  MDI2+
+    RN502.8
+    U701.17
+    XF602.16;
+  "MDI2-"
+    RN502.7
+    U701.18
+    XF602.15;
+  MDI3
+    C505.1
+    C535.1
+    RN502.3
+    RN502.4;
+  MDI3+
+    RN502.6
+    U701.20
+    XF602.10;
+  "MDI3-"
+    RN502.5
+    U701.21
+    XF602.9;
+  MINI1_CLK_REQ#
+    IOBD2.13
+    WLAN1.7;
+  MINI_2_WAKE#
+    AFTP905.1
+    WLAN1.1;
+  N17827460
+    PC204.2
+    PR210.2
+    PR211.2
+    PU201.4;
+  N17827480
+    PQ202.1
+    PR201.1
+    PR203.2;
+  N18853286
+    AFTP401.1
+    BATT1.3;
+  N21556893
+    AFTP903.1
+    WLAN1.43;
+  N230681685
+    PC322.1
+    PR326.2;
+  PBAT_PRES1#
+    AFTP403.1
+    BATT1.5
+    PR402.2;
+  PBAT_SMBCLK1
+    AFTP405.1
+    BATT1.7
+    PRN401.1;
+  PBAT_SMBDAT1
+    AFTP404.1
+    BATT1.6
+    PRN401.2;
+  PCIE_RXN2
+    IOBD2.41
+    WLAN1.23;
+  PCIE_RXN3
+    C539.1
+    IOBD2.53;
+  PCIE_RXN3_C
+    C539.2
+    U701.29;
+  PCIE_RXP2
+    IOBD2.42
+    WLAN1.25;
+  PCIE_RXP3
+    C538.1
+    IOBD2.54;
+  PCIE_RXP3_C
+    C538.2
+    U701.30;
+  PCIE_TXN2
+    IOBD2.44
+    WLAN1.31;
+  PCIE_TXN3
+    IOBD2.56
+    U701.36;
+  PCIE_TXP2
+    IOBD2.45
+    WLAN1.33;
+  PCIE_TXP3
+    IOBD2.57
+    U701.35;
+  PCIE_WAKE#
+    IOBD2.12
+    U701.3;
+  PLT_RST#
+    IOBD2.11
+    R507.2
+    WLAN1.22;
+  PLT_RST#_LAN
+    C510.1
+    R507.1
+    U701.2;
+  PM_LAN_ENABLE
+    IOBD2.10
+    Q502.2;
+  PM_LAN_ENABLE_L
+    Q502.1
+    R503.2
+    R505.1;
+  PM_LAN_ENABLE_R
+    C527.1
+    Q501.2
+    R505.2;
+  PQ3802_04
+    PQ301.3
+    PR304.2;
+  PQ3802_05
+    PQ301.5
+    PQ301.6
+    PR301.2;
+  PR3805_03
+    PR301.1
+    PR303.2
+    PU302.4;
+  PR3808_02
+    PG302.2
+    PR305.2
+    PR307.1;
+  PR3809_03
+    PG303.2
+    PR305.1
+    PR308.1;
+  PS_ID
+    PQ201.3
+    PR207.1
+    PR208.2;
+  PS_ID_R
+    AFTP202.1
+    DCIN1.1
+    PR209.1;
+  PS_ID_R2
+    PD204.A
+    PQ201.1
+    PR203.1
+    PR208.1
+    PR209.2;
+  PSID_DISABLE#
+    IOBD2.17
+    PR205.2;
+  PSID_DISABLE#_R
+    PD202.3
+    PR204.2
+    PR205.1;
+  PSID_DISABLE#_R_C
+    PQ201.2
+    PQ202.2
+    PR202.2
+    PR204.1;
+  PSID_EC
+    IOBD2.16
+    PD203.3
+    PR206.2
+    PR207.2;
+  RBIAS
+    R508.1
+    U701.10;
+  "RJ45-1"
+    AFTP601.1
+    R604.1
+    RJ45.1
+    XF601.8;
+  "RJ45-1_S"
+    R604.2
+    U604.8
+    U604.9
+    U604.10;
+  "RJ45-2"
+    AFTP602.1
+    R603.2
+    RJ45.2
+    XF601.7;
+  "RJ45-2_S"
+    R603.1
+    U604.1
+    U604.2
+    U604.3;
+  "RJ45-3"
+    AFTP603.1
+    R602.1
+    RJ45.3
+    XF601.2;
+  "RJ45-3_S"
+    R602.2
+    U603.8
+    U603.9
+    U603.10;
+  "RJ45-4"
+    AFTP604.1
+    RJ45.4
+    RN601.3
+    XF602.1;
+  "RJ45-5"
+    AFTP608.1
+    RJ45.5
+    RN601.4
+    XF602.2;
+  "RJ45-6"
+    AFTP605.1
+    R601.2
+    RJ45.6
+    XF601.1;
+  "RJ45-6_S"
+    R601.1
+    U603.1
+    U603.2
+    U603.3;
+  "RJ45-7"
+    AFTP606.1
+    RJ45.7
+    RN603.3
+    XF602.7;
+  "RJ45-8"
+    AFTP607.1
+    RJ45.8
+    RN603.4
+    XF602.8;
+  USB_P0+
+    AFTP704.1
+    D701.3
+    TR701.4
+    USB2.3;
+  "USB_P0-"
+    AFTP703.1
+    D701.2
+    TR701.1
+    USB2.2;
+  USB_PN0
+    IOBD2.59
+    TR701.2;
+  USB_PN5
+    IOBD2.47
+    WLAN1.36;
+  USB_PP0
+    IOBD2.60
+    TR701.3;
+  USB_PP5
+    IOBD2.48
+    WLAN1.38;
+  "VDDCT_REG/CLKREQ#"
+    C516.1
+    C545.1
+    R504.1
+    R510.1
+    U701.4;
+  WIFI_RF_EN
+    IOBD2.14
+    WLAN1.20;
+  WLAN_ACT
+    EC901.1
+    IOBD2.6
+    WLAN1.3;
+  XFR_CMT0
+    RN602.3
+    XF601.6;
+  XFR_CMT1
+    RN602.4
+    XF601.3;
+  XFR_CMT2
+    RN601.1
+    RN601.2
+    RN602.2
+    XF602.6;
+  XFR_CMT3
+    RN602.1
+    RN603.1
+    RN603.2
+    XF602.3;
+
+DEVICES
+  C501
+    1.MDI0
+    2.GND;
+  C502
+    1.MDI1
+    2.GND;
+  C503
+    1.+3_3V_LAN
+    2.GND;
+  C504
+    1.LAN_VDDCT
+    2.GND;
+  C505
+    1.MDI3
+    2.GND;
+  C506
+    1.MDI2
+    2.GND;
+  C507
+    1.+3_3V_ALW
+    2.GND;
+  C508
+    1.+3_3V_LAN
+    2.GND;
+  C509
+    1.+3_3V_LAN
+    2.GND;
+  C510
+    1.PLT_RST#_LAN
+    2.GND;
+  C511
+    1.GND
+    2.LAN_X2;
+  C512
+    1.GND
+    2.LAN_X1;
+  C513
+    1.MDI0
+    2.GND;
+  C514
+    1.MDI1
+    2.GND;
+  C515
+    1.+3_3V_LAN
+    2.GND;
+  C516
+    1."VDDCT_REG/CLKREQ#"
+    2.GND;
+  C517
+    1.LAN_VDDCT
+    2.GND;
+  C518
+    1.LAN_AVDDL
+    2.GND;
+  C519
+    1.LAN_AVDDH
+    2.GND;
+  C520
+    1.LAN_AVDDH
+    2.GND;
+  C521
+    1.LAN_AVDDL
+    2.GND;
+  C522
+    1.LAN_AVDDL
+    2.GND;
+  C523
+    1.LAN_DVDDL
+    2.GND;
+  C524
+    1.LAN_DVDDL
+    2.GND;
+  C525
+    1.+3_3V_LAN
+    2.GND;
+  C526
+    1.+3_3V_LAN
+    2.GND;
+  C527
+    1.PM_LAN_ENABLE_R
+    2.GND;
+  C528
+    1.+3_3V_LAN
+    2.GND;
+  C529
+    1.LAN_VDDCT
+    2.GND;
+  C532
+    1.GND
+    2.LAN_AVDDL;
+  C533
+    1.GND
+    2.LAN_AVDDH;
+  C534
+    1.GND
+    2.LAN_AVDDL;
+  C535
+    1.MDI3
+    2.GND;
+  C536
+    1.MDI2
+    2.GND;
+  C538
+    1.PCIE_RXP3
+    2.PCIE_RXP3_C;
+  C539
+    1.PCIE_RXN3
+    2.PCIE_RXN3_C;
+  C542
+    1.+3_3V_LAN
+    2.GND;
+  C543
+    1.+3_3V_LAN
+    2.GND;
+  C544
+    1.+3_3V_LAN
+    2.GND;
+  C545
+    1."VDDCT_REG/CLKREQ#"
+    2.GND;
+  C546
+    1.LAN_VDDCT
+    2.GND;
+  C547
+    1.LAN_AVDDL
+    2.GND;
+  C548
+    1.LAN_AVDDH
+    2.GND;
+  C549
+    1.LAN_DVDDL
+    2.GND;
+  C550
+    1.LAN_LED_LINK
+    2.GND;
+  C551
+    1.LAN_LED_ACTN
+    2.GND;
+  C601
+    1.AVDD_CEN
+    2.GND;
+  C602
+    1.AVDD_CEN
+    2.GND;
+  C603
+    1.AVDD_CEN
+    2.GND;
+  C604
+    1.LAN_TERMINAL
+    2.GND;
+  C605
+    1.AVDD_CEN
+    2.GND;
+  C606
+    1.AVDD_CEN
+    2.GND;
+  C701
+    1.+5V_USB1
+    2.GND;
+  C901
+    1.+5V_ALW
+    2.GND;
+  C902
+    1.+3_3V_RUN
+    2.GND;
+  C903
+    1.+3_3V_RUN
+    2.GND;
+  C904
+    1.+3_3V_RUN
+    2.GND;
+  C905
+    1.+1_5V_RUN
+    2.GND;
+  C906
+    1.+1_5V_RUN
+    2.GND;
+  EC201
+    1.+PWR_SRC
+    2.GND;
+  EC202
+    1.+PWR_SRC
+    2.GND;
+  EC203
+    1.+PWR_SRC
+    2.GND;
+  EC204
+    1.+CHAGER_SRC
+    2.GND;
+  EC205
+    1.+PWR_SRC
+    2.GND;
+  EC206
+    1.+DC_IN
+    2.GND;
+  EC207
+    1.+SDC_IN
+    2.GND;
+  EC208
+    1.+PWR_SRC
+    2.GND;
+  EC209
+    1.+PWR_SRC
+    2.GND;
+  EC210
+    1.+5V_USB1
+    2.GND;
+  EC211
+    1.+3_3V_RUN
+    2.GND;
+  EC212
+    1.+VCHGR
+    2.GND;
+  EC213
+    1.+VCHGR
+    2.GND;
+  EC214
+    1.+DC_IN
+    2.GND;
+  EC601
+    1.AVDD_CEN
+    2.GND;
+  EC602
+    1.AVDD_CEN
+    2.GND;
+  EC603
+    1.AVDD_CEN
+    2.GND;
+  EC604
+    1.AVDD_CEN
+    2.GND;
+  EC801
+    1.KBC_PWRBTN#
+    2.GND;
+  EC901
+    1.WLAN_ACT
+    2.GND;
+  PC201
+    1.+DC_IN
+    2.GND;
+  PC202
+    1.+DC_IN_SS
+    2.GND;
+  PC203
+    1.+DC_IN_SS
+    2.GND;
+  PC204
+    1.+DC_IN
+    2.N17827460;
+  PC205
+    1.+DC_IN_SS
+    2.GND;
+  PC206
+    1.+DC_IN_SS
+    2.GND;
+  PC301
+    1.MAX8731A_ACIN
+    2.CHG_AGND;
+  PC302
+    1.CHG_AGND
+    2.MAX8731A_CSSP;
+  PC303
+    1.MAX8731A_DCIN
+    2.GND;
+  PC304
+    1.CHG_AGND
+    2.MAX8731A_CSSN;
+  PC305
+    1.MAX8731A_CSSP
+    2.MAX8731A_CSSN;
+  PC306
+    1.+CHAGER_SRC
+    2.GND;
+  PC307
+    1.+CHAGER_SRC
+    2.GND;
+  PC308
+    1.+KBC_PWR
+    2.CHG_AGND;
+  PC309
+    1.24745_ICOIT_1
+    2.CHG_AGND;
+  PC310
+    1.+CHAGER_SRC
+    2.GND;
+  PC311
+    1.MAX8731A_LDO
+    2.GND;
+  PC312
+    1.MAX8731A_BST1
+    2.MAX8731A_LX1;
+  PC313
+    1.BQ24745_CHARGER_UGATE
+    2.MAX8731A_LX1;
+  PC314
+    1.24745_PHASE_GND
+    2.GND;
+  PC315
+    1.+VCHGR
+    2.GND;
+  PC316
+    1.+VCHGR
+    2.GND;
+  PC317
+    1.+VCHGR
+    2.GND;
+  PC318
+    1.+VCHGR
+    2.GND;
+  PC319
+    1.+VCHGR
+    2.GND;
+  PC320
+    1.CHG_AGND
+    2.MAX8731A_CSIP_1;
+  PC321
+    1.MAX8731A_CCV1
+    2.MAX8731A_CCI;
+  PC322
+    1.N230681685
+    2.MAX8731A_CCI;
+  PC323
+    1.MAX8731A_CSIN
+    2.MAX8731A_CSIP_1;
+  PC324
+    1.MAX8731A_IINP
+    2.CHG_AGND;
+  PC325
+    1.MAX8731A_CCI
+    2.MAX8731A_CCS;
+  PC326
+    1.MAX8731A_CCV1
+    2.CHG_AGND;
+  PC327
+    1.MAX8731A_CCI
+    2.CHG_AGND;
+  PC328
+    1.MAX8731A_CCS
+    2.CHG_AGND;
+  PC329
+    1.MAX8731A_REF
+    2.CHG_AGND;
+  PC330
+    1.MAX8731A_DAC
+    2.CHG_AGND;
+  PC331
+    1.CHG_AGND
+    2.MAX8731A_CSIN;
+  PC332
+    1.BAT_SENSE
+    2.CHG_AGND;
+  PC337
+    1.AC_IN#
+    2.GND;
+  PC401
+    1.+VCHGR
+    2.GND;
+  PC402
+    1.+VCHGR
+    2.GND;
+  TC702
+    1.+5V_USB1
+    2.GND;
+  TC901
+    1.+3_3V_RUN
+    2.GND;
+  TC902
+    1.+1_5V_RUN
+    2.GND;
+  AFTP201
+    1.+DC_IN;
+  AFTP202
+    1.PS_ID_R;
+  AFTP203
+    1.GND;
+  AFTP401
+    1.N18853286;
+  AFTP403
+    1.PBAT_PRES1#;
+  AFTP404
+    1.PBAT_SMBDAT1;
+  AFTP405
+    1.PBAT_SMBCLK1;
+  AFTP406
+    1.+VCHGR;
+  AFTP601
+    1."RJ45-1";
+  AFTP602
+    1."RJ45-2";
+  AFTP603
+    1."RJ45-3";
+  AFTP604
+    1."RJ45-4";
+  AFTP605
+    1."RJ45-6";
+  AFTP606
+    1."RJ45-7";
+  AFTP607
+    1."RJ45-8";
+  AFTP608
+    1."RJ45-5";
+  AFTP701
+    1.+5V_USB1;
+  AFTP702
+    1.GND;
+  AFTP703
+    1."USB_P0-";
+  AFTP704
+    1.USB_P0+;
+  AFTP801
+    1.KBC_PWRBTN#_IN;
+  AFTP903
+    1.N21556893;
+  AFTP905
+    1.MINI_2_WAKE#;
+  BATT1
+    1.GND
+    2.GND
+    3.N18853286
+    4.GND
+    5.PBAT_PRES1#
+    6.PBAT_SMBDAT1
+    7.PBAT_SMBCLK1
+    8.+VCHGR
+    9.+VCHGR
+    10.GND
+    11.GND;
+  DCIN1
+    1.PS_ID_R
+    2.+DC_IN
+    3.+DC_IN
+    4.GND
+    5.GND
+    6.GND
+    7.GND
+    8.GND
+    9.GND;
+  H16
+    1.GND;
+  H17
+    1.GND;
+  H18
+    1.GND;
+  HMI1
+    1.GND;
+  HPB1
+    1.GND;
+  HPB2
+    1.GND;
+  IOBD2
+    1.+5V_USB1
+    2.+5V_USB1
+    3.+1_5V_RUN
+    4.+3_3V_RUN
+    5.+3_3V_RUN
+    6.WLAN_ACT
+    7.BLUETOOTH_EN
+    8.BT_ACT
+    9.KBC_PWRBTN#
+    10.PM_LAN_ENABLE
+    11.PLT_RST#
+    12.PCIE_WAKE#
+    13.MINI1_CLK_REQ#
+    14.WIFI_RF_EN
+    15.AD_IA
+    16.PSID_EC
+    17.PSID_DISABLE#
+    18.AC_IN#
+    19.BAT_IN#
+    20.E51_TXD
+    21.E51_RXD
+    22.+3_3V_ALW
+    23.+KBC_PWR
+    24.+5V_ALW
+    25."(NC)"
+    26.+PWR_SRC
+    27.+PWR_SRC
+    28.+PWR_SRC
+    29.+PWR_SRC
+    30.+PWR_SRC
+    31.+PWR_SRC
+    32.+PWR_SRC
+    33."(NC)"
+    34.BAT_SDA
+    35.BAT_SCL
+    36.ICH_SMBDATA
+    37.ICH_SMBCLK
+    38.CLK_PCIE_MINI1#
+    39.CLK_PCIE_MINI1
+    40.GND
+    41.PCIE_RXN2
+    42.PCIE_RXP2
+    43.GND
+    44.PCIE_TXN2
+    45.PCIE_TXP2
+    46.GND
+    47.USB_PN5
+    48.USB_PP5
+    49.GND
+    50.CLK_PCIE_LAN#
+    51.CLK_PCIE_LAN
+    52.GND
+    53.PCIE_RXN3
+    54.PCIE_RXP3
+    55.GND
+    56.PCIE_TXN3
+    57.PCIE_TXP3
+    58.GND
+    59.USB_PN0
+    60.USB_PP0
+    61."(NC)"
+    62."(NC)";
+  PG301
+    1.BAT_SCL_1
+    2.BAT_SCL;
+  PG302
+    1.+SDC_IN
+    2.PR3808_02;
+  PG303
+    1.+PWR_SRC
+    2.PR3809_03;
+  PG304
+    1.+CHAGER_SRC
+    2.+PWR_SRC;
+  PG305
+    1.+CHAGER_SRC
+    2.+PWR_SRC;
+  PG306
+    1.+CHAGER_SRC
+    2.+PWR_SRC;
+  PG307
+    1.+CHAGER_SRC
+    2.+PWR_SRC;
+  PG308
+    1.BAT_SDA_1
+    2.BAT_SDA;
+  PG309
+    1.MAX8731A_CSIP
+    2.+VCHGR1;
+  PG310
+    1.24745_PR3824
+    2.+VCHGR;
+  PG401
+    1.+VCHGR
+    2.BATT_SENSE;
+  PWRBTN1
+    1.KBC_PWRBTN#_IN
+    2."(NC)"
+    3.GND
+    4."(NC)"
+    5.GND
+    6.GND
+    7."(NC)"
+    8."(NC)"
+    9."(NC)"
+    10."(NC)";
+  RJ45
+    1."RJ45-1"
+    2."RJ45-2"
+    3."RJ45-3"
+    4."RJ45-4"
+    5."RJ45-5"
+    6."RJ45-6"
+    7."RJ45-7"
+    8."RJ45-8"
+    9.GND
+    10.GND;
+  SPR2
+    1.GND;
+  USB2
+    1.+5V_USB1
+    2."USB_P0-"
+    3.USB_P0+
+    4.GND
+    5.GND
+    6.GND
+    7."(NC)"
+    8."(NC)";
+  WLAN1
+    1.MINI_2_WAKE#
+    2.+3_3V_RUN
+    3.WLAN_ACT
+    4.GND
+    5.BT_ACT
+    6.+1_5V_RUN
+    7.MINI1_CLK_REQ#
+    8."(NC)"
+    9.GND
+    10."(NC)"
+    11.CLK_PCIE_MINI1#
+    12."(NC)"
+    13.CLK_PCIE_MINI1
+    14."(NC)"
+    15.GND
+    16."(NC)"
+    17.E51_RXD_R
+    18.GND
+    19.E51_TXD_R
+    20.WIFI_RF_EN
+    21.GND
+    22.PLT_RST#
+    23.PCIE_RXN2
+    24.+3_3V_RUN
+    25.PCIE_RXP2
+    26.GND
+    27.GND
+    28.+1_5V_RUN
+    29.GND
+    30.ICH_SMBCLK
+    31.PCIE_TXN2
+    32.ICH_SMBDATA
+    33.PCIE_TXP2
+    34.GND
+    35.GND
+    36.USB_PN5
+    37.GND
+    38.USB_PP5
+    39.+3_3V_RUN
+    40.GND
+    41.+3_3V_RUN
+    42."(NC)"
+    43.N21556893
+    44."(NC)"
+    45."(NC)"
+    46."(NC)"
+    47."(NC)"
+    48.+1_5V_RUN
+    49."(NC)"
+    50.GND
+    51.+5V_MINICARD
+    52.+3_3V_RUN
+    53.GND
+    54.GND
+    55."(NC)"
+    56."(NC)";
+  XF601
+    1."RJ45-6"
+    2."RJ45-3"
+    3.XFR_CMT1
+    6.XFR_CMT0
+    7."RJ45-2"
+    8."RJ45-1"
+    9.MDI0+
+    10."MDI0-"
+    11.AVDD_CEN
+    14.AVDD_CEN
+    15.MDI1+
+    16."MDI1-";
+  XF602
+    1."RJ45-4"
+    2."RJ45-5"
+    3.XFR_CMT3
+    6.XFR_CMT2
+    7."RJ45-7"
+    8."RJ45-8"
+    9."MDI3-"
+    10.MDI3+
+    11.AVDD_CEN
+    14.AVDD_CEN
+    15."MDI2-"
+    16.MDI2+;
+  PD201
+    A.GND
+    C.+DC_IN;
+  PD204
+    A.PS_ID_R2
+    C.GND;
+  PD301
+    A.MAX8731A_LDO
+    C.MAX8731A_BST1;
+  PD302
+    A.GND
+    C.+VCHGR;
+  L501
+    1.LAN_VDDCT
+    2.LAN_LX;
+  L601
+    1.LAN_VDDCT
+    2.AVDD_CEN;
+  PL301
+    1.MAX8731A_LX1
+    2.+VCHGR1;
+  PR315
+    1.24745_BOOT_1
+    2.MAX8731A_BST1;
+  PR317
+    1.24745_PHASE_GND
+    2.MAX8731A_LX1;
+  R510
+    1."VDDCT_REG/CLKREQ#"
+    2.LAN_CLKREQ#;
+  D701
+    1.GND
+    2."USB_P0-"
+    3.USB_P0+
+    4.+5V_USB1;
+  PD202
+    1.GND
+    2.+5V_ALW
+    3.PSID_DISABLE#_R;
+  PD203
+    1.GND
+    2.+3_3V_ALW
+    3.PSID_EC;
+  PD401
+    1.GND
+    2.+KBC_PWR
+    3.BAT_IN#;
+  PD402
+    1.GND
+    2.+KBC_PWR
+    3.BAT_SDA;
+  PD403
+    1.GND
+    2.+KBC_PWR
+    3.BAT_SCL;
+  PQ201
+    1.PS_ID_R2
+    2.PSID_DISABLE#_R_C
+    3.PS_ID;
+  PQ202
+    1.N17827480
+    2.PSID_DISABLE#_R_C
+    3.GND;
+  PQ301
+    1.GND
+    2.MAX8731A_ACOK
+    3.PQ3802_04
+    4.GND
+    5.PQ3802_05
+    6.PQ3802_05;
+  PQ304
+    1.AC_IN#
+    2.ACAV_IN
+    3.GND;
+  PRN401
+    1.PBAT_SMBCLK1
+    2.PBAT_SMBDAT1
+    3.BAT_SDA
+    4.BAT_SCL;
+  PU201
+    1.+DC_IN
+    2.+DC_IN
+    3.+DC_IN
+    4.N17827460
+    5.+DC_IN_SS
+    6.+DC_IN_SS
+    7.+DC_IN_SS
+    8.+DC_IN_SS;
+  PU301
+    1.CHG_AGND
+    2.MAX8731A_ACIN
+    3.MAX8731A_REF
+    4.MAX8731A_CCS
+    5.MAX8731A_CCI
+    6.MAX8731A_CCV
+    7.MAX8731A_DAC
+    8.MAX8731A_IINP
+    9.BAT_SDA_1
+    10.BAT_SCL_1
+    11.+KBC_PWR
+    12.CHG_AGND
+    13.MAX8731A_ACOK
+    14.CHG_AGND
+    15.BAT_SENSE
+    16.BAT_SENSE
+    17.MAX8731A_CSIN
+    18.MAX8731A_CSIP_1
+    19.GND
+    20.24745_LGATE_1
+    21.MAX8731A_LDO
+    22.MAX8731A_DCIN
+    23.24745_PHASE_GND
+    24.BQ24745_CHARGER_UGATE
+    25.24745_BOOT_1
+    26.24745_ICOIT_1
+    27.MAX8731A_CSSN
+    28.MAX8731A_CSSP
+    29.CHG_AGND;
+  PU302
+    1.+SDC_IN
+    2.+SDC_IN
+    3.+SDC_IN
+    4.PR3805_03
+    5.+DC_IN_SS
+    6.+DC_IN_SS
+    7.+DC_IN_SS
+    8.+DC_IN_SS;
+  PU304
+    1.+PWR_SRC
+    2.+PWR_SRC
+    3.+PWR_SRC
+    4.+DC_IN_SS
+    5.+VCHGR
+    6.+VCHGR
+    7.+VCHGR
+    8.+VCHGR;
+  PU305
+    1.MAX8731A_LX1
+    2.MAX8731A_LX1
+    3.MAX8731A_LX1
+    4.BQ24745_CHARGER_UGATE
+    5.+CHAGER_SRC
+    6.+CHAGER_SRC
+    7.+CHAGER_SRC
+    8.+CHAGER_SRC;
+  PU306
+    1.GND
+    2.GND
+    3.GND
+    4.24745_LGATE_1
+    5.MAX8731A_LX1
+    6.MAX8731A_LX1
+    7.MAX8731A_LX1
+    8.MAX8731A_LX1;
+  Q501
+    1.+3_3V_LAN
+    2.PM_LAN_ENABLE_R
+    3.+3_3V_ALW;
+  Q502
+    1.PM_LAN_ENABLE_L
+    2.PM_LAN_ENABLE
+    3.GND;
+  RN501
+    1.MDI0
+    2.MDI0
+    3.MDI1
+    4.MDI1
+    5."MDI1-"
+    6.MDI1+
+    7."MDI0-"
+    8.MDI0+;
+  RN502
+    1.MDI2
+    2.MDI2
+    3.MDI3
+    4.MDI3
+    5."MDI3-"
+    6.MDI3+
+    7."MDI2-"
+    8.MDI2+;
+  RN601
+    1.XFR_CMT2
+    2.XFR_CMT2
+    3."RJ45-4"
+    4."RJ45-5";
+  RN602
+    1.XFR_CMT3
+    2.XFR_CMT2
+    3.XFR_CMT0
+    4.XFR_CMT1
+    5.LAN_TERMINAL
+    6.LAN_TERMINAL
+    7.LAN_TERMINAL
+    8.LAN_TERMINAL;
+  RN603
+    1.XFR_CMT3
+    2.XFR_CMT3
+    3."RJ45-7"
+    4."RJ45-8";
+  TR701
+    1."USB_P0-"
+    2.USB_PN0
+    3.USB_PP0
+    4.USB_P0+;
+  U603
+    1."RJ45-6_S"
+    2."RJ45-6_S"
+    3."RJ45-6_S"
+    4."(NC)"
+    5."(NC)"
+    6."(NC)"
+    7."(NC)"
+    8."RJ45-3_S"
+    9."RJ45-3_S"
+    10."RJ45-3_S"
+    11."(NC)";
+  U604
+    1."RJ45-2_S"
+    2."RJ45-2_S"
+    3."RJ45-2_S"
+    4."(NC)"
+    5."(NC)"
+    6."(NC)"
+    7."(NC)"
+    8."RJ45-1_S"
+    9."RJ45-1_S"
+    10."RJ45-1_S"
+    11."(NC)";
+  U605
+    1."MDI1-"
+    2."(NC)"
+    3.MDI1+
+    4."(NC)"
+    5."(NC)"
+    6."(NC)"
+    7."MDI0-"
+    8."(NC)"
+    9.MDI0+
+    10."(NC)"
+    11.GND;
+  U701
+    1.+3_3V_LAN
+    2.PLT_RST#_LAN
+    3.PCIE_WAKE#
+    4."VDDCT_REG/CLKREQ#"
+    5.LAN_VDDCT
+    6.LAN_AVDDL
+    7.LAN_X2
+    8.LAN_X1
+    9.LAN_AVDDH
+    10.RBIAS
+    11.MDI0+
+    12."MDI0-"
+    13.LAN_AVDDL
+    14.MDI1+
+    15."MDI1-"
+    16.LAN_AVDDH
+    17.MDI2+
+    18."MDI2-"
+    19.LAN_AVDDL
+    20.MDI3+
+    21."MDI3-"
+    22.LAN_AVDDH
+    23."LAN_CLKREQ#/LED2"
+    24.LAN_DVDDL
+    25."(NC)"
+    26."(NC)"
+    27.GND
+    28."(NC)"
+    29.PCIE_RXN3_C
+    30.PCIE_RXP3_C
+    31.LAN_AVDDL
+    32.CLK_PCIE_LAN#
+    33.CLK_PCIE_LAN
+    34.LAN_AVDDL
+    35.PCIE_TXP3
+    36.PCIE_TXN3
+    37.LAN_DVDDL
+    38.LAN_LED_ACTN
+    39.LAN_LED_LINK
+    40.LAN_LX
+    41.GND;
+  X501
+    1.LAN_X1
+    2.LAN_X2;
+  PR201
+    1.N17827480
+    2.GND;
+  PR202
+    1.+5V_ALW
+    2.PSID_DISABLE#_R_C;
+  PR203
+    1.PS_ID_R2
+    2.N17827480;
+  PR204
+    1.PSID_DISABLE#_R_C
+    2.PSID_DISABLE#_R;
+  PR205
+    1.PSID_DISABLE#_R
+    2.PSID_DISABLE#;
+  PR206
+    1.+3_3V_ALW
+    2.PSID_EC;
+  PR207
+    1.PS_ID
+    2.PSID_EC;
+  PR208
+    1.PS_ID_R2
+    2.PS_ID;
+  PR209
+    1.PS_ID_R
+    2.PS_ID_R2;
+  PR210
+    1.+DC_IN
+    2.N17827460;
+  PR211
+    1.GND
+    2.N17827460;
+  PR301
+    1.PR3805_03
+    2.PQ3802_05;
+  PR302
+    1.+SDC_IN
+    2.+PWR_SRC;
+  PR303
+    1.+SDC_IN
+    2.PR3805_03;
+  PR304
+    1.+DC_IN_SS
+    2.PQ3802_04;
+  PR305
+    1.PR3809_03
+    2.PR3808_02;
+  PR306
+    1.+DC_IN_SS
+    2.GND;
+  PR307
+    1.PR3808_02
+    2.MAX8731A_CSSP;
+  PR308
+    1.PR3809_03
+    2.MAX8731A_CSSN;
+  PR309
+    1.+DC_IN_SS
+    2.MAX8731A_ACIN;
+  PR310
+    1.MAX8731A_DCIN
+    2.+DC_IN_SS;
+  PR311
+    1.MAX8731A_REF
+    2.ACAV_IN;
+  PR312
+    1.24745_ICOIT_1
+    2.MAX8731A_LDO;
+  PR313
+    1.MAX8731A_ACIN
+    2.CHG_AGND;
+  PR314
+    1.MAX8731A_LDO
+    2.ACAV_IN;
+  PR316
+    1.MAX8731A_ACOK
+    2.ACAV_IN;
+  PR318
+    1.ACAV_IN
+    2.GND;
+  PR319
+    1.+VCHGR1
+    2.+VCHGR;
+  PR320
+    1.MAX8731A_IINP
+    2.AD_IA;
+  PR321
+    1.MAX8731A_CCV
+    2.MAX8731A_CCV1;
+  PR322
+    1.MAX8731A_CCI
+    2.MAX8731A_CCV;
+  PR323
+    1.MAX8731A_CSIP_1
+    2.MAX8731A_CSIP;
+  PR324
+    1.MAX8731A_CSIN
+    2.24745_PR3824;
+  PR325
+    1.MAX8731A_IINP
+    2.CHG_AGND;
+  PR326
+    1.MAX8731A_CCS
+    2.N230681685;
+  PR327
+    1.MAX8731A_REF
+    2.MAX8731A_DAC;
+  PR328
+    1.BATT_SENSE
+    2.BAT_SENSE;
+  PR329
+    1.GND
+    2.CHG_AGND;
+  PR330
+    1.BATT_SENSE
+    2.CHG_AGND;
+  PR401
+    1.BAT_IN#
+    2.+KBC_PWR;
+  PR402
+    1.BAT_IN#
+    2.PBAT_PRES1#;
+  R501
+    1.+3_3V_RUN
+    2.+3_3V_LAN;
+  R502
+    1.+3_3V_ALW
+    2.+3_3V_LAN;
+  R503
+    1.+3_3V_ALW
+    2.PM_LAN_ENABLE_L;
+  R504
+    1."VDDCT_REG/CLKREQ#"
+    2.LAN_VDDCT;
+  R505
+    1.PM_LAN_ENABLE_L
+    2.PM_LAN_ENABLE_R;
+  R506
+    1.+3_3V_LAN
+    2.LAN_CLKREQ#;
+  R507
+    1.PLT_RST#_LAN
+    2.PLT_RST#;
+  R508
+    1.RBIAS
+    2.GND;
+  R509
+    1.LAN_CLKREQ#
+    2."LAN_CLKREQ#/LED2";
+  R514
+    1.LAN_LED_ACTN
+    2.GND;
+  R516
+    1.LAN_LED_LINK
+    2.GND;
+  R601
+    1."RJ45-6_S"
+    2."RJ45-6";
+  R602
+    1."RJ45-3"
+    2."RJ45-3_S";
+  R603
+    1."RJ45-2_S"
+    2."RJ45-2";
+  R604
+    1."RJ45-1"
+    2."RJ45-1_S";
+  R703
+    1.+5V_USB1
+    2.GND;
+  R801
+    1.KBC_PWRBTN#_IN
+    2.KBC_PWRBTN#;
+  R911
+    1.E51_RXD
+    2.E51_RXD_R;
+  R912
+    1.E51_TXD
+    2.E51_TXD_R;
+  R913
+    1.+5V_ALW
+    2.+5V_MINICARD;
+  R919
+    1.BLUETOOTH_EN
+    2.+5V_MINICARD;
+
+END
